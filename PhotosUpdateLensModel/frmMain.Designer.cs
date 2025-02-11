@@ -150,7 +150,7 @@
             ClientSize = new Size(800, 232);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(statusStrip1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmMain";

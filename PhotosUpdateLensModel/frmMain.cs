@@ -23,6 +23,12 @@ namespace PhotosUpdateLensModel
                 folderDialog.Description = "Select Photos folder";
                 folderDialog.UseDescriptionForTitle = true;
 
+                // Set initial directory if current path is valid
+                if (!string.IsNullOrWhiteSpace(txtPhotos.Text) && Directory.Exists(txtPhotos.Text))
+                {
+                    folderDialog.InitialDirectory = txtPhotos.Text;
+                }
+
                 if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
                     txtPhotos.Text = folderDialog.SelectedPath;
