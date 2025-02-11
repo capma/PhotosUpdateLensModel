@@ -48,7 +48,7 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripProgressBar1, toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 210);
+            statusStrip1.Location = new Point(0, 156);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(800, 22);
             statusStrip1.TabIndex = 1;
@@ -67,34 +67,35 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(panTop, 0, 0);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 53.8095245F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 46.1904755F));
-            tableLayoutPanel1.Size = new Size(800, 207);
+            tableLayoutPanel1.Size = new Size(800, 156);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // panTop
             // 
-            panTop.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panTop.Controls.Add(btnBrowsePhotos);
             panTop.Controls.Add(txtPhotos);
             panTop.Controls.Add(label2);
-            panTop.Location = new Point(3, 3);
+            panTop.Dock = DockStyle.Fill;
+            panTop.Location = new Point(4, 4);
             panTop.Name = "panTop";
-            panTop.Size = new Size(794, 105);
+            panTop.Size = new Size(792, 76);
             panTop.TabIndex = 0;
             // 
             // btnBrowsePhotos
             // 
-            btnBrowsePhotos.Location = new Point(715, 34);
+            btnBrowsePhotos.Location = new Point(712, 21);
             btnBrowsePhotos.Name = "btnBrowsePhotos";
             btnBrowsePhotos.Size = new Size(75, 23);
             btnBrowsePhotos.TabIndex = 5;
@@ -104,7 +105,7 @@
             // 
             // txtPhotos
             // 
-            txtPhotos.Location = new Point(66, 35);
+            txtPhotos.Location = new Point(63, 22);
             txtPhotos.Name = "txtPhotos";
             txtPhotos.Size = new Size(643, 23);
             txtPhotos.TabIndex = 3;
@@ -112,7 +113,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(9, 38);
+            label2.Location = new Point(6, 25);
             label2.Name = "label2";
             label2.Size = new Size(44, 15);
             label2.TabIndex = 2;
@@ -120,24 +121,25 @@
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel2.ColumnCount = 2;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.Controls.Add(btnStart, 1, 0);
-            tableLayoutPanel2.Location = new Point(3, 114);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(4, 87);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(794, 90);
+            tableLayoutPanel2.Size = new Size(792, 65);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // btnStart
             // 
-            btnStart.Location = new Point(400, 3);
+            btnStart.Dock = DockStyle.Fill;
+            btnStart.Location = new Point(399, 3);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(390, 55);
+            btnStart.Size = new Size(390, 59);
             btnStart.TabIndex = 0;
             btnStart.Text = "Start";
             btnStart.UseVisualStyleBackColor = true;
@@ -147,7 +149,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 232);
+            ClientSize = new Size(800, 178);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(statusStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
