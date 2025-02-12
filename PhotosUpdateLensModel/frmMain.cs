@@ -58,13 +58,19 @@ namespace PhotosUpdateLensModel
                     return;
                 }
 
+                // Build the ExifTool command based on checkbox states
+                string recursiveFlag = chkIncludeSubFolders.Checked ? "-r " : "";
+                string lensModelCondition = chkOverrideLensModel.Checked ?
+                    "" :  // no condition when overriding
+                    "-if \"not $LensModel or $LensModel eq ''\" ";
+
                 // Create process info for ExifTool
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
                     FileName = exiftoolPath,
-                    Arguments = $"-overwrite_original " + // Add this to overwrite originals
-                                $"-r -ext jpg -ext jpeg " +
-                                $"-if \"not $LensModel or $LensModel eq ''\" " +
+                    Arguments = $"-overwrite_original " +
+                                $"{recursiveFlag}-ext jpg -ext jpeg " +
+                                $"{lensModelCondition}" +
                                 $"-tagsfromfile @ " +
                                 $"-if \"$Lens\" \"-LensModel<$Lens\" " +
                                 $"-if \"$LensSpec\" \"-LensModel<$LensSpec\" " +
